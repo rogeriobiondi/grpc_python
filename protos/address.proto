@@ -1,0 +1,27 @@
+// proto
+syntax = "proto3";
+
+service Address {
+    rpc create(address_obj) returns (address_obj) {}
+    rpc update(address_obj) returns (address_obj) {}
+    rpc get(get_request) returns (address_obj) {}
+    rpc list(list_request) returns (stream address_obj) {} 
+    rpc delete(get_request) returns (address_obj) {}
+}
+
+message address_obj {
+    string id      = 1;
+    string street  = 2;
+    int32  number  = 3;
+    string city    = 4;
+    string state   = 5;
+    string country = 6;
+    string zip     = 7;
+}
+
+message get_request {
+    string id      = 1;
+}
+
+message list_request {
+}
