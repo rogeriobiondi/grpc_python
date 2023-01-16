@@ -1,2 +1,2 @@
 # grpc_python
-GRPC Python Test Service/Client
+Sample GRPC Python Test Service/Client
